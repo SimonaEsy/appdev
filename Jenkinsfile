@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Fetch git repo and build docker image') {
             steps {
-                git url: 'https://github.com/SimonaEsy/appdev.git', branch: 'main'
                 sh 'ls -la'
                 sh 'docker build -t hello_py:1 .'
                 sh 'docker images'
